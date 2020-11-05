@@ -30,7 +30,7 @@ Internal penetration test on GoodCorp's CEO, Hans Gruber. The objective is to ex
       > Answer: 
       First, I needed to work out what IP address the CEO's computer was using. I knew that the network was using the 192.168.0.? range.
       I used nmap
-      **nmap -sV "192.168.0.20"
+      **nmap -sV "192.168.0.20"**
       
       ![](https://github.com/paulsbarrett/Penetration_Test_Engagement/blob/images/penetration-1701.png)
 
@@ -40,7 +40,7 @@ Internal penetration test on GoodCorp's CEO, Hans Gruber. The objective is to ex
   
       > Answer: 
       command to run is:
-      **searchsploit icecast
+      **searchsploit icecast**
       
       ![](https://github.com/paulsbarrett/Penetration_Test_Engagement/blob/images/penetration-1703.png)
       
@@ -50,7 +50,7 @@ Internal penetration test on GoodCorp's CEO, Hans Gruber. The objective is to ex
   
       > Answer: 
       command to run is:
-      **msfconsole
+      **msfconsole**
       
 4. Search for the Icecast module and load it for use
 
@@ -58,7 +58,7 @@ Internal penetration test on GoodCorp's CEO, Hans Gruber. The objective is to ex
   
       > Answer: 
       command to run is:
-      **search icecast
+      **search icecast**
       
       ![](https://github.com/paulsbarrett/Penetration_Test_Engagement/blob/images/penetration-1705.png)
       
@@ -66,12 +66,12 @@ Internal penetration test on GoodCorp's CEO, Hans Gruber. The objective is to ex
     
       > Answer: 
       command to run from Metasploit is:
-      **use 0 (0 being the first (and in this case only) module available to be run. We can use the shortcut so we don’t need to type or copy and paste the full module name).
+      **use 0 (0 being the first (and in this case only) module available to be run. We can use the shortcut so we don’t need to type or copy and paste the full module name).**
       
       ![](https://github.com/paulsbarrett/Penetration_Test_Engagement/blob/images/penetration-1706.png)
       
       Next I ran the command to show what options were available within the module:
-      **show options
+      **show options**
 
       ![](https://github.com/paulsbarrett/Penetration_Test_Engagement/blob/images/penetration-1707.png)
       
@@ -81,7 +81,7 @@ Internal penetration test on GoodCorp's CEO, Hans Gruber. The objective is to ex
   
       > Answer: 
       command to run is:
-      **set RHOSTS 192.168.0.20
+      **set RHOSTS 192.168.0.20**
       
       ![](https://github.com/paulsbarrett/Penetration_Test_Engagement/blob/images/penetration-1708.png)
       
@@ -91,7 +91,7 @@ Internal penetration test on GoodCorp's CEO, Hans Gruber. The objective is to ex
   
       > Answer: 
       command to run is:
-      **run (exploit will also work)
+      **run (exploit will also work)**
       
       ![](https://github.com/paulsbarrett/Penetration_Test_Engagement/blob/images/penetration-1709.png)
       
@@ -99,7 +99,7 @@ Internal penetration test on GoodCorp's CEO, Hans Gruber. The objective is to ex
   
       > Answer: 
       command to run is:
-      **search -f *secretfile.txt
+      **search -f *secretfile.txt**
       
       ![](https://github.com/paulsbarrett/Penetration_Test_Engagement/blob/images/penetration-1710.png)
       
@@ -109,7 +109,7 @@ Internal penetration test on GoodCorp's CEO, Hans Gruber. The objective is to ex
   
       > Answer: 
       command to run is:
-      **search -f *recipe.txt
+      **search -f *recipe.txt**
       
       ![](https://github.com/paulsbarrett/Penetration_Test_Engagement/blob/images/penetration-1711.png)
      
@@ -117,11 +117,11 @@ Internal penetration test on GoodCorp's CEO, Hans Gruber. The objective is to ex
     
       > Answer: 
       command to run is:
-      **download Drinks.recipe.txt
+      **download Drinks.recipe.txt**
       
       ![](https://github.com/paulsbarrett/Penetration_Test_Engagement/blob/images/penetration-1712.png)
       
-      **I then used the ‘cat’ command to view the contents of both .txt files. The second txt file’s contents contains bank account details.
+      **I then used the ‘cat’ command to view the contents of both .txt files. The second txt file’s contents contains bank account details.**
       
       ![](https://github.com/paulsbarrett/Penetration_Test_Engagement/blob/images/penetration-1713.png)      
       
@@ -136,15 +136,15 @@ Internal penetration test on GoodCorp's CEO, Hans Gruber. The objective is to ex
       > Results: 
       I used Meterpreter to check for common vulnerabilities. 
       using the command
-      **run post/multi/recon/local_exploit_suggester
+      **run post/multi/recon/local_exploit_suggester**
       
       Meterpreter discovered two possible vulnerabilities:
     
       ![](https://github.com/paulsbarrett/Penetration_Test_Engagement/blob/images/penetration-1715.png)    
       
       **The two exploits of concern are
-      **•	ikeext_service
-      **•	ms16-075
+      **•	ikeext_service**
+      **•	ms16-075**
 
       The ikeext services exploit module exploits a missing DLL loaded by the 'IKE and AuthIP Keyring Modules' (IKEEXT) service which runs as SYSTEM, and starts automatically in default installations of Vista-Win8. It requires an insecure bin path to plant the DLL payload.
 
@@ -154,10 +154,10 @@ Internal penetration test on GoodCorp's CEO, Hans Gruber. The objective is to ex
       
 A. Run a Meterpreter post script that enumerates all logged on users.
 
-    - **I googled meterpreter enumerate all logged on users
+    - **I googled meterpreter enumerate all logged on users**
     
       > Answer:
-      **I found the following blog helpful, and I tested various meterpreter commands:
+      **I found the following blog helpful, and I tested various meterpreter commands:**
       https://blog.rapid7.com/2015/08/11/metasploit-local-exploit-suggester-do-less-get-more/
       
       Meterpreter discovered two possible vulnerabilities:
@@ -168,7 +168,7 @@ B. Open a Meterpreter shell and gather system information for the target:
 
       > Answer: 
       command to run is:
-      **shell
+      **shell**
       
       ![](https://github.com/paulsbarrett/Penetration_Test_Engagement/blob/images/penetration-1717.png)
       ![](https://github.com/paulsbarrett/Penetration_Test_Engagement/blob/images/penetration-1718.png)
@@ -177,4 +177,4 @@ C. Run the command that displays the target's computer system information:
 
       > Answer: 
       command to run is:
-      **sudo lshw      
+      **sudo lshw**   
