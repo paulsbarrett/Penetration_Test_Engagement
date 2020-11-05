@@ -150,8 +150,8 @@ Internal penetration test on GoodCorp's CEO, Hans Gruber. The objective is to ex
       ![](https://github.com/paulsbarrett/Penetration_Test_Engagement/blob/images/penetration-1715.png)    
       
       **The two exploits of concern are
-      **•	ikeext_service**
-      **•	ms16-075**
+           **•	ikeext_service**
+           **•	ms16-075**
 
       The ikeext services exploit module exploits a missing DLL loaded by the 'IKE and AuthIP Keyring Modules' (IKEEXT) service which runs as SYSTEM, and starts automatically in default installations of Vista-Win8. It requires an insecure bin path to plant the DLL payload.
 
