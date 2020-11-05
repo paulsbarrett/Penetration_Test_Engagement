@@ -29,7 +29,14 @@ Internal penetration test on GoodCorp's CEO, Hans Gruber. The objective is to ex
 
       > Answer: 
       First, I needed to work out what IP address the CEO's computer was using. I knew that the network was using the 192.168.0.? range.
-      I used nmap
+      I used 
+      **nmap -sn 192.168.0.0/24**
+      
+      Having ruled out IP addresses using the 4th octet being 192.168.0.1, 192.168.0.10, 192.168.0.21, 192.168.0.22 and 192.168.0.8, I decided to investigate **192.168.0.20**
+      
+      ![](https://github.com/paulsbarrett/Penetration_Test_Engagement/blob/images/penetration-1702.png)      
+      
+      Then I used nmap
       **nmap -sV "192.168.0.20"**
       
       ![](https://github.com/paulsbarrett/Penetration_Test_Engagement/blob/images/penetration-1701.png)
@@ -66,7 +73,7 @@ Internal penetration test on GoodCorp's CEO, Hans Gruber. The objective is to ex
     
       > Answer: 
       command to run from Metasploit is:
-      **use 0 (0 being the first (and in this case only) module available to be run. We can use the shortcut so we don’t need to type or copy and paste the full module name).**
+      **use 0 (0 being the first (and in this case only) module available to be run. I used the shortcut so I did’t need to type or 'copy and paste' the full module name).**
       
       ![](https://github.com/paulsbarrett/Penetration_Test_Engagement/blob/images/penetration-1706.png)
       
