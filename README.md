@@ -159,19 +159,20 @@ Internal penetration test on GoodCorp's CEO, Hans Gruber. The objective is to ex
        
 #### Bonus
       
-A. Run a Meterpreter post script that enumerates all logged on users.
+1. Run a Meterpreter post script that enumerates all logged on users.
 
     - **I googled meterpreter enumerate all logged on users**
     
-      > Answer:
+      > Research:
       **I found the following blog helpful, and I tested various meterpreter commands:**
       https://blog.rapid7.com/2015/08/11/metasploit-local-exploit-suggester-do-less-get-more/
       
+      > Answer:
       Meterpreter discovered two possible vulnerabilities:
     
       ![](https://github.com/paulsbarrett/Penetration_Test_Engagement/blob/images/penetration-1716.png)   
       
-B. Open a Meterpreter shell and gather system information for the target:     
+2. Open a Meterpreter shell and gather system information for the target:     
 
       > Answer: 
       command to run is:
@@ -180,7 +181,7 @@ B. Open a Meterpreter shell and gather system information for the target:
       ![](https://github.com/paulsbarrett/Penetration_Test_Engagement/blob/images/penetration-1717.png)
       ![](https://github.com/paulsbarrett/Penetration_Test_Engagement/blob/images/penetration-1718.png)
       
-C. Run the command that displays the target's computer system information:     
+3. Run the command that displays the target's computer system information:     
 
       > Answer: 
       command to run is:
